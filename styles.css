@@ -1,0 +1,160 @@
+/* General */
+html, body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+body {
+  font-family: 'Ubuntu', Arial, sans-serif;
+  line-height: 1.6;
+  color: black;
+  background-color: #dee2e6;
+}
+
+[id] {
+  scroll-margin-top: 60px;
+}
+
+/* Banner */
+.banner {
+  background: #212529;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.banner h1{
+  margin: 0;
+  padding: 0;
+}
+
+#logo{
+  padding-left: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+/* Navegación */
+.navbar {
+  color: white;
+  padding: 1rem;
+}
+
+.navbar #menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  position: relative;
+  margin: 0 0.5rem;
+}
+
+.navbar ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #9daaaa;
+}
+
+/* Submenú */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #343a40;
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.submenu li a:hover {
+  color: #575757;
+}
+
+/* Mostrar el submenú al pasar el ratón */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* Pie de página */
+.footer-content {
+  display: flex;
+  background-color: #212529;
+  color: white;
+  justify-content: center;
+  gap: 5rem;
+  padding: 1rem;
+}
+
+.footer-content h2{
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #9daaaa;
+}
+
+.footer-content img {
+  width: 30px;
+  border-radius: 10%;
+  transition: transform 0.3s ease;
+}
+
+.footer-content img:hover {
+  transform: translateY(-5px);
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem; /* Ajustado para un mejor espaciado */
+  }
+}
